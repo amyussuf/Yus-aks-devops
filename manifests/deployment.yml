@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: amyussufyusaksdevops 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: amyussufyusaksdevops
+  template:
+    metadata:
+      labels:
+        app: amyussufyusaksdevops 
+    spec:
+      containers:
+        - name: amyussufyusaksdevops 
+          image: yusacr.azurecr.io/amyussufyusaksdevops
+          ports:
+          - containerPort: 8080
